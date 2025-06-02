@@ -1,0 +1,42 @@
+/*
+ * styles.css
+ * This file contains custom styling rules for My_First_Portfolio project.
+ * It primarily implements Flexbox for page layout.
+ */
+
+/* Apply Flexbox to the <body> to arrange its direct children (<header>, <main>, <footer>) in a column. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+}
+
+/* Apply Flexbox to the <main> to arrange its direct children (<article>, <aside>) in a row. */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* Allows <main> to grow and shrink, taking up available space */
+}
+
+/* Configure <article> to take 2/3 of the available width within <main> */
+article {
+    flex: 2; /* Takes 2 parts of the flexible space */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    padding-right: 10px; /* Add some padding to separate from aside */
+}
+
+/* Configure <aside> to take 1/3 of the available width within <main> */
+aside {
+    flex: 1; /* Takes 1 part of the flexible space */
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    padding-left: 10px; /* Add some padding to separate from article */
+    border-left: 1px solid #ccc; /* Optional: Add a visual separator */
+}
+
+/* Optional: Basic styling for the aside content to make it visible */
+aside {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-left: 15px; /* Adds some space between article and aside */
+}
