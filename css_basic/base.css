@@ -1,0 +1,90 @@
+/*
+ * base.css
+ * This file contains fundamental, common styles for the My_First_Portfolio website.
+ * It provides a basic visual foundation for all pages linked to it.
+ */
+
+/* Universal box-sizing for consistent layout */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Basic body styling: font, line-height, and background color */
+body {
+    font-family: "Inter", sans-serif; /* Using Inter font, with a generic sans-serif fallback */
+    line-height: 1.6; /* Improves readability of text */
+    margin: 0; /* Removes default browser margin */
+    padding: 0; /* Removes default browser padding */
+    background-color: #f4f4f4; /* Light gray background for the page */
+    color: #333; /* Dark gray text color for readability */
+}
+
+/* Header styling: background, text color, padding, and alignment */
+header {
+    background-color: #2c3e50; /* Dark blue-gray background */
+    color: #ffffff; /* White text color */
+    padding: 1em 0; /* Vertical padding */
+    text-align: center; /* Center-aligns content within the header */
+}
+
+/* Main heading (h1) in the header */
+header h1 {
+    margin: 0; /* Removes default margin from the h1 */
+    font-size: 2.5em; /* Larger font size for prominence */
+}
+
+/* Navigation menu styling */
+nav ul {
+    list-style: none; /* Removes bullet points from list items */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Uses flexbox for horizontal layout of navigation items */
+    justify-content: center; /* Centers the navigation items horizontally */
+    gap: 20px; /* Adds space between navigation items */
+}
+
+nav ul li a {
+    color: #ffffff; /* White link color */
+    text-decoration: none; /* Removes underline from links */
+    font-weight: bold; /* Makes link text bold */
+    padding: 0.5em 1em; /* Padding around links for better clickability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Slightly rounded corners for links */
+}
+
+nav ul li a:hover {
+    background-color: #34495e; /* Darker background on hover */
+}
+
+/* Main content area styling */
+main {
+    padding: 20px; /* Padding around the main content */
+    max-width: 960px; /* Limits the maximum width of the content for readability */
+    margin: 20px auto; /* Centers the main content block horizontally with top/bottom margin */
+    background-color: #ffffff; /* White background for the main content area */
+    border-radius: 8px; /* Rounded corners for the main content block */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Section headings */
+h2, h3 {
+    color: #2c3e50; /* Dark blue-gray color for headings */
+    border-bottom: 2px solid #3498db; /* Blue underline for headings */
+    padding-bottom: 0.5em; /* Space between heading text and underline */
+    margin-top: 1.5em; /* Space above headings */
+}
+
+/* Paragraph styling */
+p {
+    margin-bottom: 1em; /* Space below paragraphs */
+}
+
+/* Footer styling */
+footer {
+    background-color: #2c3e50; /* Dark blue-gray background, consistent with header */
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center-aligns content in the footer */
+    padding: 1em 0; /* Vertical padding */
+    margin-top: 20px; /* Space above the footer */
+    font-size: 0.9em; /* Slightly smaller font size for footer text */
+}
