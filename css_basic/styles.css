@@ -1,36 +1,34 @@
 /*
  * styles.css
  * This file contains custom styling rules for My_First_Portfolio project.
- * It primarily implements Flexbox for page layout.
+ * It primarily implements Flexbox for page layout and now includes
+ * additional aesthetic styling.
  */
 
-/* Apply Flexbox to the <body> to arrange its direct children (<header>, <main>, <footer>) in a column. */
+/* Flexbox rules (DO NOT CHANGE THESE FOR LAYOUT) */
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    min-height: 100vh;
 }
 
-/* Apply Flexbox to the <main> to arrange its direct children (<article>, <aside>) in a row. */
 main {
     display: flex;
     flex-direction: row;
-    flex: auto; /* Allows <main> to grow and shrink, taking up available space */
+    flex: auto;
 }
 
-/* Configure <article> to take 2/3 of the available width within <main> */
 article {
-    flex: 2; /* Takes 2 parts of the flexible space */
-    overflow-y: auto; /* Enables vertical scrolling if content overflows */
-    padding-right: 10px; /* Add some padding to separate from aside */
+    flex: 2;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-/* Configure <aside> to take 1/3 of the available width within <main> */
 aside {
-    flex: 1; /* Takes 1 part of the flexible space */
-    overflow-y: auto; /* Enables vertical scrolling if content overflows */
-    padding-left: 10px; /* Add some padding to separate from article */
-    border-left: 1px solid #ccc; /* Optional: Add a visual separator */
+    flex: 1;
+    overflow-y: auto;
+    padding-left: 10px;
+    border-left: 1px solid #ccc;
 }
 
 /* Optional: Basic styling for the aside content to make it visible */
@@ -38,5 +36,103 @@ aside {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 5px;
-    margin-left: 15px; /* Adds some space between article and aside */
+    margin-left: 15px;
+    font-style: italic; /* Adding some style to aside */
+    color: #666;
+}
+
+/* --- New Styles Added Below This Line --- */
+
+/* Styling for the Logo */
+.logo {
+    font-size: 2.2em; /* Make the logo significantly larger */
+    color: #FFD700; /* A nice gold color for the logo */
+    padding: 0 15px; /* Add some spacing around the logo */
+    line-height: 1; /* Adjust line height to prevent extra space */
+    align-self: center; /* Vertically align with other nav items */
+    margin-right: auto; /* Push navigation links to the right */
+}
+
+/* Adjust navigation to allow logo to be distinct */
+header nav ul {
+    justify-content: flex-start; /* Align items to the start to make room for logo */
+    align-items: center; /* Vertically center items */
+    padding-left: 20px; /* Add some left padding to the nav list */
+}
+
+/* General Link Styling (outside of header nav, e.g. footer links) */
+a {
+    color: #3498db; /* A friendly blue for links */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #2980b9; /* Slightly darker blue on hover */
+}
+
+/* Styling for tables (if present in article) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    margin: 20px 0; /* Margin above and below table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Light gray borders */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for table headers */
+    color: #555;
+    font-weight: bold;
+}
+
+/* Optional: Stripe rows for readability */
+tbody tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+tbody tr:hover {
+    background-color: #eaeaea; /* Light highlight on row hover */
+}
+
+/* Styling for h1, h2, p within main content */
+main h1 {
+    color: #1a2c3a; /* Darker heading color */
+    font-size: 2.8em;
+    margin-bottom: 0.5em;
+}
+
+main h2 {
+    color: #1a2c3a;
+    font-size: 2em;
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+main p {
+    font-size: 1.05em;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* Specific styling for the embedded tweet's container (optional, if you want to center it) */
+/* This assumes the blockquote is a direct child of article */
+article blockquote.twitter-tweet {
+    margin: 25px auto; /* Center the tweet horizontally */
+    max-width: 550px; /* Limit its width if it gets too wide */
+    border: 1px solid #eee; /* Add a subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Footer specific styles */
+footer p {
+    margin: 0; /* Remove default paragraph margin within footer */
+    font-size: 0.9em;
 }
